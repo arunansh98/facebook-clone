@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue py-2 text-white text-primary font-[600] rounded-[6px] flex flex-row items-center;
+  }
+
+  .btn-secondary {
+    @apply bg-grey py-2 text-black text-primary font-[600] rounded-[6px] flex flex-row items-center hover:bg-[#e3e5e7];
+  }
+
+  .btn-transparent {
+    @apply bg-transparent py-2 text-primary font-[600] rounded-[6px] hover:bg-[#f3f3f3];
+  }
+}
+
+* {
+  @apply font-primary;
+}
+
+input[type="text"],
+input[type="password"] {
+  @apply border-none outline-none w-full;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+hr {
+  border: solid 0.1px #dadde1;
+  width: 100%;
+  color: #dadde1;
+  height: 1px;
+}
+
+.login-container {
+  @apply flex flex-col h-[456px] w-[396px] items-center p-4 bg-[#fff] rounded-[6px] h-fit;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+button[disabled] {
+  opacity: 40%;
+  cursor: not-allowed;
+}
+
+h1 {
+  @apply text-lg font-bold;
+}
+
+h2 {
+  @apply text-md font-bold;
+}
+
+h3 {
+  @apply text-sm font-bold;
+}
+
+a {
+  @apply hover:underline cursor-pointer;
+}

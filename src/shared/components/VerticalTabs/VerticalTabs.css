@@ -1,0 +1,18 @@
+.tabs-divider {
+  height: auto;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.tabs {
+  @apply pl-2 w-[20%];
+}
+
+.tabs-content {
+  @apply pl-2 w-[80%];
+}
+
+.tab {
+  @apply py-1;
+}

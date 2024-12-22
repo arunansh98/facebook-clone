@@ -1,0 +1,7 @@
+.box-shadow {
+  box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.border-not-focused {
+  border: 1px solid #dddfe2;
+}

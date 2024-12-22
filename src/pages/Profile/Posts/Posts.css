@@ -1,0 +1,98 @@
+.posts {
+  @apply py-5 flex flex-row;
+}
+
+.posts button.transparent-button {
+  @apply hover:bg-[#f3f3f3] text-blue text-[17px] rounded-[6px] p-2;
+}
+
+button.btn-wide {
+  @apply btn-secondary px-12 w-[100%] mt-3 justify-center;
+}
+
+button.btn-small {
+  @apply px-4 w-[fit-content];
+}
+
+button.save {
+  @apply btn-primary disabled:text-black disabled:bg-grey;
+}
+
+.posts textarea {
+  @apply rounded-[6px] mt-2 w-[100%] bg-[#f0f2f5] h-[70px] text-center text-primary font-bold pt-[10px];
+  border: 1px solid aliceblue;
+  resize: none;
+  color: rgb(100, 99, 99);
+}
+
+.posts textarea:focus {
+  outline: none;
+  @apply !border-blue !border-[1px] !border-solid bg-[white];
+}
+
+.posts textarea:hover {
+  @apply bg-[#f0f2f5];
+}
+
+.posts textarea::placeholder {
+  @apply text-center text-[#666666] font-bold  text-primary;
+}
+
+.left-cards {
+  @apply w-[40%] flex flex-col mr-4;
+}
+
+.left-cards > * {
+  @apply mb-4;
+}
+
+.right-cards {
+  @apply w-[60%] flex flex-col;
+}
+
+.right-cards > * {
+  @apply mb-4;
+}
+
+.edit-details-modal * {
+  @apply font-homePrimary;
+}
+
+.edit-details-modal h3 > span {
+  @apply text-[#65676B] block !font-[400] text-primary;
+}
+
+.edit-details-modal-header {
+  @apply flex flex-row items-center py-3 px-3;
+}
+
+.edit-details-modal-body {
+  @apply px-6 py-3 h-[35rem] overflow-y-auto;
+}
+
+.edit-details-modal-footer {
+  @apply flex flex-row justify-between p-4;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ced0d4;
+  border-radius: 6px;
+}
+
+.posts-tabs-content {
+  @apply p-[15px];
+  width: 100%;
+}
+
+textarea.textarea {
+  @apply !h-[40px] !rounded-[50px] !text-left !mt-[0rem] !pt-[0.5rem] !pl-[0.8rem] !leading-normal !w-full;
+  padding-right: calc(130px + 0.8rem);
+}
+
+textarea.textarea::placeholder {
+  @apply text-left;
+}

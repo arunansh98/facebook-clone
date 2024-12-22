@@ -1,0 +1,43 @@
+.profile {
+  @apply font-homePrimary;
+}
+
+.profile * {
+  @apply font-[inherit];
+}
+
+.cover-photo {
+  @apply flex flex-col text-[#050505] font-[500] cursor-pointer;
+}
+
+.cover-photo div {
+  @apply flex flex-row items-center !font-homePrimary mb-1 hover:bg-[#f3f3f3] rounded-[6px] px-1;
+}
+
+.profile-photo {
+  @apply flex flex-col text-[#050505] font-[500] cursor-pointer;
+}
+
+.profile-photo div {
+  @apply flex flex-row items-center !font-homePrimary mb-1 hover:bg-[#f3f3f3] rounded-[6px] px-1;
+}
+
+.remove-cover-photo {
+  @apply flex flex-col text-[#050505] p-2;
+}
+
+.remove-cover-photo * {
+  @apply !font-homePrimary;
+}
+
+.profile-photo-section {
+  @apply flex flex-row justify-between;
+}
+
+.profile > * {
+  @apply max-w-[1250px] mx-auto;
+}
+
+.tab-container {
+  @apply px-[2rem] mx-auto;
+}

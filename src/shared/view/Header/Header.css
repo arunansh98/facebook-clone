@@ -1,0 +1,4 @@
+.header {
+  @apply h-[56px] w-[100%] flex flex-row justify-between relative bg-[#fff];
+  box-shadow: 2px 2px 2px #e5e5e5;
+}

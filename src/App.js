@@ -7,7 +7,7 @@ import Header from "./shared/view/Header/Header";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/facebook-clone">
       <Routes>
         <Route path={LANDING} element={<LandingPage />} />
         <Route path={HOME} element={<RoutePage />}>

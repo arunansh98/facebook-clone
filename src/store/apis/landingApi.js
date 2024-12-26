@@ -5,7 +5,7 @@ import { POST } from "../../constants/methodTypes";
 const landingApi = createApi({
   reducerPath: "landing",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3005",
+    baseUrl: "https://facebook-clone-backend-1.onrender.com",
   }),
   endpoints(builder) {
     return {

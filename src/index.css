@@ -39,8 +39,9 @@ hr {
   height: 1px;
 }
 
+/* Updated for responsiveness */
 .login-container {
-  @apply flex flex-col h-[456px] w-[396px] items-center p-4 bg-[#fff] rounded-[6px] h-fit;
+  @apply flex flex-col w-full sm:w-[396px] items-center p-4 bg-[#fff] rounded-[6px] h-fit;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,6 +50,20 @@ button[disabled] {
   cursor: not-allowed;
 }
 
+/* Updated Logo responsiveness */
+.logo-container {
+  @apply flex flex-col items-center text-center px-4 sm:px-0;
+}
+
+.logo-container img {
+  @apply h-[80px] sm:h-[106px];
+}
+
+.logo-container h1 {
+  @apply text-sm sm:text-lg mt-4;
+}
+
+/* General heading styles */
 h1 {
   @apply text-lg font-bold;
 }
@@ -63,4 +78,13 @@ h3 {
 
 a {
   @apply hover:underline cursor-pointer;
+}
+
+/* Landing responsiveness */
+.landing-page {
+  @apply bg-[#f0f2f5] pt-[72px] pb-[112px] flex flex-col items-center min-h-[640px];
+}
+
+.landing-container {
+  @apply flex flex-col sm:flex-row justify-center items-center w-full sm:w-[980px];
 }

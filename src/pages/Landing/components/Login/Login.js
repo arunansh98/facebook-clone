@@ -18,7 +18,7 @@ function Login() {
   useNavigateHook(results);
 
   const textInputClassNames = classNames(
-    "w-[364px] rounded-[6px] mb-4 py-[14px] px-[16px]",
+    "w-full sm:w-[364px] rounded-[6px] mb-4 py-[14px] px-[16px]",
     "border-not-focused",
     "focus-within:border-blue",
     "focus-within:caret-blue",
@@ -36,8 +36,11 @@ function Login() {
   };
 
   return (
-    <div id="home" className="login-container">
-      <form>
+    <div
+      id="home"
+      className="login-container flex flex-col items-center px-4 py-6 sm:py-10"
+    >
+      <form className="w-full max-w-xs sm:max-w-sm">
         <TextInput
           className={textInputClassNames}
           value={email}
@@ -54,18 +57,18 @@ function Login() {
         />
         <button
           onClick={handleLogin}
-          className="text-[#fff] text-[20px] font-bold bg-blue border-blue w-[364px] py-[11px] px-[16px] rounded-[6px] mb-4"
+          className="text-white text-md font-bold bg-blue hover:bg-blue-700 border-blue-600 w-full py-2 rounded-[6px] mb-4"
         >
           Log in
         </button>
       </form>
-      <button className="mb-4 text-blue text-[14px]">
+      <button className="mb-4 text-blue text-sm hover:underline">
         Forgotten password?
       </button>
-      <hr className="mb-6" />
+      <hr className="w-full max-w-xs sm:max-w-sm mb-6 border-gray-300" />
       <button
         onClick={() => setShowSignUpModal(true)}
-        className="text-[#fff] text-[17px] font-bold bg-green py-[11px] px-[16px] rounded-[6px] border-green"
+        className="text-white text-md font-bold bg-green hover:bg-green-700 border-green-600 w-full py-2 rounded-[6px]"
       >
         Create new account
       </button>

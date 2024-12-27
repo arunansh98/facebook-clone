@@ -6,21 +6,27 @@ function TextInput({ ...rest }) {
   const { className, ...inputRest } = rest;
   const isPassword = rest.type === "password" && rest?.value?.length > 0;
   const inputClassName = classNames(
-    "!bg-transparent",
-    isPassword && "!w-[93%] mr-1"
+    "!bg-transparent w-full",
+    isPassword && "mr-2"
   );
-  const divClassName = classNames("flex flex-row", className);
+  const divClassName = classNames("flex items-center", className);
   const [showPassword, setShowPassword] = useState(false);
   const type = isPassword ? (showPassword ? "text" : "password") : rest.type;
+
   return (
     <div className={divClassName}>
-      <input className={inputClassName} {...inputRest} type={type} />
+      <input
+        className={inputClassName}
+        {...inputRest}
+        type={type}
+        aria-label={rest.placeholder || "Input field"}
+      />
       {isPassword && (
         <img
           onClick={() => setShowPassword(!showPassword)}
-          className="w-[7%] cursor-pointer"
+          className="w-5 h-5 cursor-pointer"
           src={PasswordHide}
-          alt="hide"
+          alt={showPassword ? "Hide password" : "Show password"}
         />
       )}
     </div>

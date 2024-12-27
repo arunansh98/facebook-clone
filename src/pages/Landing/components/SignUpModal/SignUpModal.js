@@ -31,19 +31,19 @@ const reducer = (state, action) => {
 
 function SignUpModal({ onClose }) {
   const inputClassNames = classNames(
-    "rounded-[5px] w-[194px] h-[40px] p-[11px] font-secondary text-primary",
+    "rounded-[5px] w-full h-[40px] p-[11px] font-secondary text-primary",
     "border bg-[#f5f6f7]",
     "focus-within:outline-none"
   );
 
   const dropDownClassNames = classNames(
     "flex flex-row border items-center font-secondary text-primary",
-    "w-[125px] h-[36px] justify-between rounded-[5px]"
+    "w-full h-[36px] justify-between rounded-[5px]"
   );
 
   const radioClassNames = classNames(
     "flex flex-row border items-center font-secondary text-primary",
-    "w-[125px] h-[36px] justify-between rounded-[5px] px-[10px]"
+    "w-full h-[36px] justify-between rounded-[5px] px-[10px]"
   );
 
   const anchorClassNames = classNames("text-[#385898] hover:underline");
@@ -99,19 +99,24 @@ function SignUpModal({ onClose }) {
 
   return (
     <Modal>
-      <div className="flex flex-col">
-        <div className="flex flex-row justify-between items-center px-3">
-          <h1 className="font-secondary">Sign Up</h1>
-          <img src={Close} alt="close" onClick={onClose} />
+      <div className="flex flex-col w-full max-w-lg mx-auto px-4 sm:px-8">
+        <div className="flex flex-row justify-between items-center py-3">
+          <h1 className="font-secondary text-xl sm:text-2xl">Sign Up</h1>
+          <img
+            src={Close}
+            alt="close"
+            className="cursor-pointer"
+            onClick={onClose}
+          />
         </div>
-        <div className="text-primary text-[#606770] font-secondary px-3">
-          Its quick and easy.
+        <div className="text-primary text-sm sm:text-base text-[#606770] font-secondary py-3">
+          It's quick and easy.
         </div>
-        <hr className="mt-2" />
-        <div className="p-[16px]">
-          <div className="flex flex-row mb-3">
+        <hr className="my-2" />
+        <div className="py-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
             <TextInput
-              className={inputClassNames + " mr-2"}
+              className={inputClassNames}
               type="text"
               placeholder="First Name"
               value={getFieldValue(FIRST_NAME)}
@@ -128,7 +133,7 @@ function SignUpModal({ onClose }) {
             />
           </div>
           <TextInput
-            className={inputClassNames + " w-full mb-3"}
+            className={inputClassNames + " mb-3"}
             type="text"
             placeholder="Mobile number or email address"
             value={getFieldValue(MOBILE_NUMBER_EMAIL)}
@@ -137,7 +142,7 @@ function SignUpModal({ onClose }) {
             }
           />
           <TextInput
-            className={inputClassNames + " w-full mb-3"}
+            className={inputClassNames + " mb-3"}
             type="password"
             placeholder="New password"
             value={getFieldValue(NEW_PASSWORD)}
@@ -145,14 +150,14 @@ function SignUpModal({ onClose }) {
               setFieldValue(NEW_PASSWORD, event.target.value)
             }
           />
-          <div className="flex flex-row justify-start items-center font-secondary text-[12px] text-[#606770]">
+          <div className="flex flex-row justify-start items-center text-sm text-[#606770] font-secondary mb-2">
             Date of birth
             <GoQuestion
               className="ml-1 cursor-pointer"
               title="Click for more information"
             />
           </div>
-          <div className="flex flex-row mb-3 justify-between">
+          <div className="grid grid-cols-3 gap-3 mb-3">
             <DropDown
               className={dropDownClassNames}
               id={DATE_OF_BIRTH}
@@ -175,10 +180,10 @@ function SignUpModal({ onClose }) {
               onChange={(value) => setFieldValue(YEAR, value)}
             />
           </div>
-          <div className="flex flex-row justify-start items-center font-secondary text-[12px] text-[#606770]">
+          <div className="flex flex-row justify-start items-center text-sm text-[#606770] font-secondary mb-2">
             Gender
             <GoQuestion
-              className="ml-1 cursor-pointer bg-red"
+              className="ml-1 cursor-pointer"
               title="Click for more information"
             />
           </div>
@@ -194,18 +199,18 @@ function SignUpModal({ onClose }) {
           {showPronounSection && (
             <>
               <DropDown
-                className={dropDownClassNames + " w-full"}
+                className={dropDownClassNames + " w-full mb-3"}
                 id={PRONOUN}
                 options={pronounOptions}
                 selected={getFieldValue(PRONOUN)}
                 onChange={(value) => setFieldValue(PRONOUN, value)}
                 placeholder="Select your pronoun"
               />
-              <p className="mt-1 mb-2 text-[12px] text-[#606770]">
+              <p className="text-xs text-[#606770] mb-2">
                 Your pronoun is visible to everyone.
               </p>
               <TextInput
-                className={inputClassNames + " w-full mb-3"}
+                className={inputClassNames + " mb-3"}
                 type="text"
                 placeholder="Gender (optional)"
                 value={getFieldValue(GENDER_OPTIONAL)}
@@ -214,18 +219,17 @@ function SignUpModal({ onClose }) {
                 }
               />
             </>
-          )}{" "}
-          <p className="text-[11px] text-[#777]">
+          )}
+          <p className="text-xs text-[#777] mb-3">
             People who use our service may have uploaded your contact
             information to Facebook.{" "}
             <a className={anchorClassNames} href="learn more">
               Learn more
             </a>
           </p>
-          <p className="text-[11px] text-[#777] my-[11px]">
-            By clicking Sign Up, you agree to our
+          <p className="text-xs text-[#777] mb-4">
+            By clicking Sign Up, you agree to our{" "}
             <a href="terms" className={anchorClassNames}>
-              {" "}
               Terms,{" "}
             </a>
             <a href="privacy" className={anchorClassNames}>
@@ -238,10 +242,10 @@ function SignUpModal({ onClose }) {
             You may receive SMS notifications from us and can opt out at any
             time.
           </p>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center">
             <button
               onClick={handleSubmit}
-              className="text-[#fff] text-[18px] font-bold font-secondary w-[194px] h-[36px] bg-[#00a400] hover:bg-gradient-to-r hover:from-[#79bc64] hover:to-[#578843] px-[32px] rounded-[6px] border-green"
+              className="text-white text-md font-bold font-secondary w-full max-w-sm h-10 bg-[#00a400] hover:bg-[#007a00] px-4 rounded-md border-green"
             >
               Sign Up
             </button>

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/facebook-clone/static/css/main.6fd1f8d2.css",
-    "main.js": "/facebook-clone/static/js/main.adc4e545.js",
+    "main.css": "/facebook-clone/static/css/main.260362ff.css",
+    "main.js": "/facebook-clone/static/js/main.3e350ac6.js",
     "static/media/facebook-logo.svg": "/facebook-clone/static/media/facebook-logo.9a412a203c8ba19e646fa19818f129b3.svg",
     "index.html": "/facebook-clone/index.html",
     "static/media/eye-password-hide.svg": "/facebook-clone/static/media/eye-password-hide.1b05fda831e8c5722762ab8a03581b59.svg",
     "static/media/avatar.svg": "/facebook-clone/static/media/avatar.d0fe4569f5c3bce797aacfdcd14feae4.svg",
-    "main.6fd1f8d2.css.map": "/facebook-clone/static/css/main.6fd1f8d2.css.map",
-    "main.adc4e545.js.map": "/facebook-clone/static/js/main.adc4e545.js.map"
+    "main.260362ff.css.map": "/facebook-clone/static/css/main.260362ff.css.map",
+    "main.3e350ac6.js.map": "/facebook-clone/static/js/main.3e350ac6.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fd1f8d2.css",
-    "static/js/main.adc4e545.js"
+    "static/css/main.260362ff.css",
+    "static/js/main.3e350ac6.js"
   ]
 }
